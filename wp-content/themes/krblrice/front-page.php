@@ -71,6 +71,7 @@
         </div>
 
     </div>
+    <div class="scroll_to_discover">Scroll to discover</div>
 </section>
 
 <section class="about-us-section gap">

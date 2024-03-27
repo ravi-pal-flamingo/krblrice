@@ -79,7 +79,8 @@
     .title-small2{font-size: 26px;font-weight: 400;color: var(--brandColor);line-height: 1.4;text-transform: capitalize;}
     .title-xs-small{font-size: 20px;font-weight: 400;color: var(--brandColor);line-height: 1.4;text-transform: capitalize;}
     .white-text{color: var(--whiteColor);}
-
+    .clear_fix{clear: both;}
+    .mt-50{margin-top: 48px;}
     .row{display: flex;margin: 0px -15px;flex-wrap: wrap;}
     .col-sm-2{width: 16.66666667%;padding: 0px 15px;}
     .col-sm-3{width: 25%;padding: 0px 15px;}
@@ -92,7 +93,7 @@
     .col-sm-10{width: 83.33333333%;padding: 0px 15px;}
     .col-sm-11{width: 91.66666667%;padding: 0px 15px;}
     .col-sm-12{width: 100%;padding: 0px 15px;}
-    .crating-growth-content-wraper, .row-filed, .god-of-grains-wraper, .tab-sustainability-wraper, .news-update-slider, .about-rice-step, .about-video {margin-top: 70px;}
+    .crating-growth-content-wraper, .row-filed, .god-of-grains-wraper, .tab-sustainability-wraper, .news-update-slider, .about-rice-step, .about-video, .board_directors .row {margin-top: 70px;}
 
     .swiper-pagination-bullet{background: none;border: 1px solid var(--brandborder);opacity: 1;}
     .swiper-pagination-bullet:hover{-webkit-animation: pulse2 1s infinite; animation: pulse2 1s infinite; box-shadow: 0 0 0 8px transparent;}
@@ -159,6 +160,7 @@
     .close-search{position: fixed;top: 30px;right: 50px;font-size: 22px;font-weight: 600;cursor: pointer;}
         
     /*---homepage---banner---start---here---*/
+    .homepage-banner{position: relative;}
     .banner-item{position: relative;}
     .banner-content{position: absolute;top: 50px; right: 7%; width: 615px;}
     .banner-content .btn-box{margin-top: 25px;}
@@ -295,7 +297,7 @@
 .vjs-ended .vjs-big-play-button{display: block !important;}
 
 /*---footer---start---here---*/
-footer{background-color: var(--brandBg); position: relative;    background-position: bottom;}
+footer{background-color: var(--brandBg); position: relative;    background-position: bottom;overflow: hidden;}
 footer .container2{position: relative;z-index: 2;}
 .footer-title{font-size: 26px;margin-bottom: 30px;}
 .footer-description{line-height: 1.5;}
@@ -337,6 +339,45 @@ footer .container2{position: relative;z-index: 2;}
 .youtubeOverlay:hover .play-iconvideo{-webkit-animation: pulse2 1s infinite;animation: pulse2 1s infinite;box-shadow: 0 0 0 50px transparent;background: var(--brandBg);cursor: pointer;}
 
 
+/*---leadership---start---here---*/
+
+/*---common--banner---start---here---*/
+.scroll_to_discover{position: absolute;bottom: 100px;right: -33px;transform: rotate(90deg);z-index: 1;font-weight: 500;animation: bounce 2s infinite;-webkit-animation: bounce 3s infinite;-moz-animation: bounce 3s infinite;-o-animation: bounce 3s infinite;}
+@keyframes bounce {0%, 20%, 50%, 80%, 100% {bottom: 100px;}50% {bottom: 150px;}100% {bottom: 100px;}}
+.homepage-banner .scroll_to_discover{bottom: 145px;animation: bounce2 2s infinite;-webkit-animation: bounce2 3s infinite;-moz-animation: bounce2 3s infinite;-o-animation: bounce2 3s infinite;}
+@keyframes bounce2 {0%, 20%, 50%, 80%, 100% {bottom: 145px;}50% {bottom: 195px;}100% {bottom: 145px;}}
+.scroll_to_discover:after{content: ''; position: absolute;top: 9px;margin-left: 10px;width: 45px;height: 1px;background: var(--brandBg);}
+.common_banner{position: relative;}
+.common_banner_content{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 2;width: 100%;padding: 0px 10px;}
+.common_banner_wraper{position: relative;}
+.common_banner_wraper:after{content: '';position: absolute;top: 0px;left: 0px;right: 0px;bottom: 0px;background: linear-gradient(0deg, #73513A 0%, rgba(115, 81, 58, 0) 100%);z-index: 1;}
+/*---common--banner---end---here---*/
+
+/*---key--note---start---here---*/
+.key_note_section{background: var(--lightshadeBg2);}
+.key-note-left-box{padding-right: 16%;}
+.key_note_content{padding-left: 0px;}
+
+.key_note_content p strong{font-size: 16px;font-weight: 500;}
+.key_note_content p, .key_note_content_wraper p{margin-top: 50px;line-height: 1.5;padding-right:70px;}
+.key_note_content_wraper{display: flex;flex-wrap: wrap;}
+.key_note_content_wraper p{width: 50%;}
+.btn_director_content, .btn_director_colm, .btn_our_key_people{display: none;}
+
+
+/*---leader--box---start---here---*/
+.leader-box{position: relative;overflow: hidden; }
+.leader-img{display: block;width: 100%;transition: all 0.5s;}
+.leader-box:hover .leader-img{transform: scale(1.03);}
+.leader_detail{position: absolute;bottom: 0px;left: 0px;width: 85%;background: var(--brandBg);padding: 20px;}
+.leader-name{font-size: 18px;font-weight: 500;margin-bottom: 5px;}
+.key_note_content .leader-box{display: none;}
+.board_directors .col-sm-4{margin-bottom: 30px;}
+.board_directors .col-sm-4:nth-last-of-type(1), .board_directors .col-sm-4:nth-last-of-type(2), .board_directors .col-sm-4:nth-last-of-type(3){margin-bottom: 0px;}
+.our_key_people{background: var(--lightshadeBg2);}
+/*---board---directors---start---here---*/
+
+
 
     @media only screen and (min-width: 1900px){
     body{font-size: 16px;}
@@ -376,7 +417,7 @@ footer .container2{position: relative;z-index: 2;}
     .homepage-about-titmeline{padding-top: 45px;}
 
      /*--creating---growth---start---here---*/
-    .god-of-grains-wraper, .crating-growth-content-wraper, .row-filed, .about-video{margin-top: 90px;}
+    .god-of-grains-wraper, .crating-growth-content-wraper, .row-filed, .about-video, .board_directors .row{margin-top: 90px;}
     .content-box-creating-growth{padding-top: 90px;padding-bottom: 90px;}
     .creating-growth-section-parrent{padding-bottom: 70px;}
 
@@ -406,5 +447,16 @@ footer .container2{position: relative;z-index: 2;}
 
 
 
+   /*---common--banner---start---here---*/
+   .scroll_to_discover{bottom: 111px;right: -38px;}
+   @keyframes bounce {0%, 20%, 50%, 80%, 100% {bottom: 111px;}50% {bottom: 162px;}100% {bottom: 111px;}}
+   @keyframes bounce2 {0%, 20%, 50%, 80%, 100% {bottom: 180px;}50% {bottom: 230px;}100% {bottom: 180px;}}
+
+
+   /*---key--note---start---here---*/
+   .key-note-left-box{padding-right: 20%;}
+   .leader-name{font-size: 25px;}
+
+    
 
     }
